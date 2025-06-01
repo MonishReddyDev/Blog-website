@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Homepage</title>
+  </head>
+  <body>
+    <h1>Blog Posts</h1>
+
+    {% for blog in blogs %}
+    <hr />
+    <h2>{{ blog.title }}</h2>
+    <p><strong>Category:</strong> {{ blog.category.category_name }}</p>
+    <p><em>By {{ blog.author.username }} | {{ blog.created_at }}</em></p>
+    {% if blog.blog_image %}
+    <img src="{{ blog.blog_image.url }}" width="200px" />
+    {% endif %}
+    <p>{{ blog.short_description }}</p>
+    {% empty %}
+    <p>No blog posts available.</p>
+    {% endfor %}
+  </body>
+</html>
