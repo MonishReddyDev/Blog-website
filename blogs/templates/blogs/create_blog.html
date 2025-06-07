@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Blog</title>
+  </head>
+  <body>
+    <h1>Create a New Blog</h1>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Publish</button>
+    </form>
+    <a href="{% url 'home' %}">← Back to Home</a>
+  </body>
+</html>

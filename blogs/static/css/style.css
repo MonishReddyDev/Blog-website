@@ -1,0 +1,68 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+.search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 6px;
+  width: 200px;
+  font-size: 14px;
+}
+
+/* Right side links */
+.nav-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-right a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Profile Circle */
+.profile {
+  background: orange;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

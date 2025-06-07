@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('blogs.urls')),
+    path('', include('blogs.urls')),
 ]
 
 # Only for development (serve media files)

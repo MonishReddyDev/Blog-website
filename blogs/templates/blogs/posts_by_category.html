@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blogs in {{ category.category_name }}</title>
+  </head>
+  <body>
+    <h1>Category: {{ category.category_name }}</h1>
+    <ul>
+      {% for blog in blogs %}
+      <li>
+        <a href="{% url 'blog_detail' blog.slug %}">
+          {{ blog.title }} - {{ blog.short_description|truncatewords:15 }}
+        </a>
+      </li>
+      {% empty %}
+      <li>No blogs in this category.</li>
+      {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}">← Back to Home</a>
+  </body>
+</html>
